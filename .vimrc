@@ -15,6 +15,9 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'jiangmiao/auto-pairs'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'scrooloose/nerdcommenter'
+Plugin 'tpope/vim-fugitive'
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
 " node.js
 Plugin 'ternjs/tern_for_vim'
 
@@ -45,8 +48,9 @@ let mapleader=","
 " Color scheme
 set linespace=8
 
-" Autostart
+" Autostart & Autostop
 autocmd VimEnter * NERDTree | wincmd p
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
 " Nerd Commenter
 let g:NERDSpaceDelims = 1
@@ -57,6 +61,15 @@ let g:NERDCustomDelimiters = { 'c': { 'left': '/**','right': '*/' } }
 let g:NERDCommentEmptyLines = 1
 let g:NERDTrimTrailingWhitespace = 1
 
+" NERDTree
+let NERDTreeShowBookmarks=1
+let NERDTreeIgnore=['\.pyc', '\~$', '\.swo$', '\.swp$', '\.git', '\.hg', '\.svn', '\.bzr']
+let NERDTreeChDirMode=0
+let NERDTreeQuitOnOpen=0
+let NERDTreeMouseMode=2
+let NERDTreeShowHidden=1
+map <leader>l :NERDTreeFind<cr>
+
 " copy to system clipboard
 noremap <Leader>y "*y
 noremap <Leader>p "*p
@@ -66,3 +79,6 @@ noremap <Leader>P "+p
 " Tern setting
 let g:tern_show_argument_hints='on_hold'
 let g:tern_map_keys=1
+
+" vim-airline settings
+let g:airline#extensions#tabline#enabled = 1
