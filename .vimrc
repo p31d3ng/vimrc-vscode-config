@@ -5,12 +5,16 @@ filetype off                " required
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()         " required
 
+" Vundle
 Plugin 'VundleVim/Vundle.vim'
+Plugin 'L9'
+
+" Personal Choice
 Plugin 'terryma/vim-multiple-cursors'
 Plugin 'scrooloose/nerdtree'
 Plugin 'jiangmiao/auto-pairs'
 Plugin 'Valloric/YouCompleteMe'
-Plugin 'L9'
+Plugin 'scrooloose/nerdcommenter'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
