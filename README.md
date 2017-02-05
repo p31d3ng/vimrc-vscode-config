@@ -11,8 +11,11 @@ nvm install v4.3.0
 ```
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 cd ~; rm .vimrc; wget https://raw.githubusercontent.com/p31-d3ng/vimrc/master/.vimrc
+cd ~; rm .tern-project; wget https://raw.githubusercontent.com/p31-d3ng/vimrc/master/.tern-project
 vim +PluginInstall +qall
-npm install -g typescript
+cd ~/.vim/bundle/tern_for_vim
+npm install
 cd ~/.vim/bundle/YouCompleteMe
 ./install.py --tern-completer
+cd ~
 ```
