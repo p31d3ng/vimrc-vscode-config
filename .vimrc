@@ -38,9 +38,19 @@ set hlsearch
 set ignorecase
 set smartcase
 set backspace=2
+let mapleader=","
 
 " Color scheme
 set linespace=8
 
 " Autostart
 autocmd VimEnter * NERDTree | wincmd p
+
+" Nerd Commenter
+let g:NERDSpaceDelims = 1
+let g:NERDCompactSexyComs = 1
+let g:NERDDefaultAlign = 'left'
+let g:NERDAltDelims_java = 1
+let g:NERDCustomDelimiters = { 'c': { 'left': '/**','right': '*/' } }
+let g:NERDCommentEmptyLines = 1
+let g:NERDTrimTrailingWhitespace = 1

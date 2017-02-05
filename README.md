@@ -10,7 +10,7 @@ nvm install v4.3.0
 # VIM (node.js/javascript/python autocomplete)
 ```
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
-cd ~; wget https://github.com/p31-d3ng/vimrc/blob/master/.vimrc
+cd ~; rm .vimrc; wget https://raw.githubusercontent.com/p31-d3ng/vimrc/master/.vimrc
 vim +PluginInstall +qall
 npm install -g typescript
 cd ~/.vim/bundle/YouCompleteMe
