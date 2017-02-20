@@ -44,6 +44,7 @@ set ignorecase
 set smartcase
 set backspace=2
 let mapleader=","
+set completeopt-=preview
 
 " Color scheme
 set linespace=8
