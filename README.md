@@ -10,7 +10,7 @@ OR (AWS EC2 AMI)
 ```
 sudo yum install cmake
 sudo yum install gcc
-yum install gcc-c++
+sudo yum install gcc-c++
 curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.0/install.sh | bash
 source ~/.bashrc
 nvm install v4.3.0
