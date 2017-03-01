@@ -6,6 +6,14 @@ curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.0/install.sh | b
 source ~/.bashrc
 nvm install v4.3.0
 ```
+OR (AWS EC2 AMI)
+```
+sudo yum install cmake
+sudo yum install gcc
+curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.0/install.sh | bash
+source ~/.bashrc
+nvm install v4.3.0
+```
 
 # VIM (node.js/javascript/python autocomplete)
 ```
