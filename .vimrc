@@ -20,17 +20,18 @@ Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 " node.js
 Plugin 'ternjs/tern_for_vim'
+Plugin 'pangloss/vim-javascript'
+" Emment
+Plugin 'mattn/emmet-vim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
 
-" show existing tab with 4 spaces width
-set tabstop=4
-" when indenting with '>', use 4 spaces width
-set shiftwidth=4
-" On pressing tab, insert 4 spaces
+" Indentation
 set expandtab
+set softtabstop=2
+set shiftwidth=2
 
 " The followings are added on Feb 4 2017
 set shell=bash
