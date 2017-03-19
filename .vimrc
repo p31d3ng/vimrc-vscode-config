@@ -23,6 +23,8 @@ Plugin 'ternjs/tern_for_vim'
 Plugin 'pangloss/vim-javascript'
 " Emment
 Plugin 'mattn/emmet-vim'
+" vim-tmux
+Plugin 'christoomey/vim-tmux-navigator'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
