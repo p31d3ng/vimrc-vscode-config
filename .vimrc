@@ -83,6 +83,12 @@ let g:tern_map_keys=1
 " vim-airline settings
 let g:airline#extensions#tabline#enabled = 1
 
+" shortcuts
+nnoremap <c-j> <c-w>j
+nnoremap <c-k> <c-w>k
+nnoremap <c-h> <c-w>h
+nnoremap <c-l> <c-w>l
+
 " Color scheme
 set linespace=8
 let &t_Co=256
