@@ -52,7 +52,6 @@ set completeopt-=preview
 
 " Autostart & Autostop
 autocmd VimEnter * NERDTree | wincmd p
-autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
 " Nerd Commenter
 let g:NERDSpaceDelims = 1
