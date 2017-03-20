@@ -16,7 +16,7 @@ source ~/.bashrc
 nvm install v4.3.0
 ```
 
-# VIM (node.js/javascript/python autocomplete)
+# Installation steps (vim node.js/javascript/python autocomplete)
 ```
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 cd ~; rm .vimrc; wget https://raw.githubusercontent.com/p31-d3ng/vimrc/master/.vimrc; cd -
