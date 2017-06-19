@@ -51,7 +51,8 @@ let mapleader=","
 set completeopt-=preview
 
 " Autostart & Autostop
-autocmd VimEnter * NERDTree | wincmd p
+" autocmd VimEnter * NERDTree | wincmd p
+nmap <leader>ne :NERDTreeToggle<cr>
 
 " Nerd Commenter
 let g:NERDSpaceDelims = 1
