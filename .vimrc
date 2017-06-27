@@ -25,6 +25,8 @@ Plugin 'pangloss/vim-javascript'
 Plugin 'mattn/emmet-vim'
 " vim-tmux
 Plugin 'christoomey/vim-tmux-navigator'
+" React JSX
+Plugin 'mxw/vim-jsx'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -84,6 +86,9 @@ let g:tern_map_keys=1
 
 " vim-airline settings
 let g:airline#extensions#tabline#enabled = 1
+
+" jsx settings
+let g:jsx_ext_required = 0
 
 " shortcuts
 nnoremap <c-j> <c-w>j
