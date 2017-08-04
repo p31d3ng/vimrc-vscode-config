@@ -7,10 +7,6 @@ set -q XDG_DATA_HOME
 source $OMF_PATH/init.fish
 # alias
 alias s='subl'
-alias dev="cd ~/Dropbox/Development"
-alias mase="cd ~/Dropbox/Development/mase"
-alias devops="cd ~/Securly/devops"
-alias algo="cd ~/Dropbox/Development/algorithmLearning"
 alias gcmsg='git commit -m'
 alias gp='git push'
 alias gd='git diff'
