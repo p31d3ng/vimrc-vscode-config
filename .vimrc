@@ -27,6 +27,8 @@ Plugin 'mattn/emmet-vim'
 Plugin 'christoomey/vim-tmux-navigator'
 " React JSX
 Plugin 'mxw/vim-jsx'
+" Syntax Checker
+Plugin 'vim-syntastic/syntastic'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -89,6 +91,16 @@ let g:airline#extensions#tabline#enabled = 1
 
 " jsx settings
 let g:jsx_ext_required = 0
+
+" syntastic settings
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+let g:syntastic_javascript_checkers = ['eslint']
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
 
 " shortcuts
 nnoremap <c-j> <c-w>j
