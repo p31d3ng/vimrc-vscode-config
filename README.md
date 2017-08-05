@@ -22,7 +22,13 @@ git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 cd ~; rm .vimrc; wget https://raw.githubusercontent.com/p31-d3ng/vimrc/master/.vimrc; cd -
 cd ~; rm .tmux.conf; wget https://raw.githubusercontent.com/p31-d3ng/vimrc/master/.tmux.conf; cd -
 cd ~; rm .tern-project; wget https://raw.githubusercontent.com/p31-d3ng/vimrc/master/.tern-project; cd -
+cd ~; rm .eslintrc; wget https://raw.githubusercontent.com/p31-d3ng/vimrc/master/.eslintrc; cd -
 vim +PluginInstall +qall
 cd ~/.vim/bundle/tern_for_vim && npm install; cd -
 cd ~/.vim/bundle/YouCompleteMe && ./install.py --tern-completer; cd -
+
+# For React Development only
+npm install -g eslint
+npm install -g babel-eslint
+npm install -g eslint-plugin-react
 ```
