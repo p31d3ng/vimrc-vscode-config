@@ -35,5 +35,5 @@ npm install -g eslint-plugin-react
 
 ## VSCode (if installed)
 ```
-cp vscode/*.json ~/Library/Application\ Support/Code/User/settings.json
+cp vscode/*.json ~/Library/Application\ Support/Code/User/
 ```
