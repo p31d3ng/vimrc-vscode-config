@@ -29,7 +29,10 @@
     "vim.leader": "<space>",
     "vim.handleKeys":{
         "<C-a>": false,
-        "<C-f>": false
+        "<C-f>": false,
+        "<C-n>": false,
+        "<C-p>": false,
+        "<C-b>": false
     },
     "vim.disableAnnoyingNeovimMessage": true
 }
