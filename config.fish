@@ -13,6 +13,18 @@ alias gd='git diff'
 alias gaa='git add -A'
 alias gst='git status'
 alias cl='clear;ls -al'
+# docker alias
+alias dl="docker ps -l -q"
+alias dps="docker ps"
+alias dpa="docker ps -a"
+alias di="docker images"
+alias dip="docker inspect --format '{{ .NetworkSettings.IPAddress }}'"
+alias dkd="docker run -d -P"
+alias dki="docker run -i -t -P"
+alias dex="docker exec -i -t"
+# kubenetes
+alias sw_mk='eval (minikube docker-env)'
+alias sw_nt='eval (minikube docker-env -u)'
 
 # Vim
 set -x EDITOR vim
