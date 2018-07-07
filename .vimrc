@@ -18,15 +18,6 @@ Plugin 'scrooloose/nerdcommenter'
 Plugin 'tpope/vim-fugitive'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
-" node.js
-Plugin 'ternjs/tern_for_vim'
-Plugin 'pangloss/vim-javascript'
-" Emment
-Plugin 'mattn/emmet-vim'
-" vim-tmux
-Plugin 'christoomey/vim-tmux-navigator'
-" React JSX
-Plugin 'mxw/vim-jsx'
 " Syntax Checker
 Plugin 'vim-syntastic/syntastic'
 
@@ -36,8 +27,8 @@ filetype plugin indent on    " required
 
 " Indentation
 set expandtab
-set softtabstop=2
-set shiftwidth=2
+set softtabstop=4
+set shiftwidth=4
 
 " The followings are added on Feb 4 2017
 set shell=bash
@@ -82,15 +73,8 @@ noremap <Leader>p "*p
 noremap <Leader>Y "+y
 noremap <Leader>P "+p
 
-" Tern setting
-let g:tern_show_argument_hints='on_hold'
-let g:tern_map_keys=1
-
 " vim-airline settings
 let g:airline#extensions#tabline#enabled = 1
-
-" jsx settings
-let g:jsx_ext_required = 0
 
 " syntastic settings
 set statusline+=%#warningmsg#
