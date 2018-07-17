@@ -45,6 +45,9 @@ set backspace=2
 let mapleader=","
 set completeopt-=preview
 
+inoremap kj <Esc>
+inoremap jk <Esc>
+
 " Autostart & Autostop
 " autocmd VimEnter * NERDTree | wincmd p
 nmap <leader>ne :NERDTreeToggle<cr>
