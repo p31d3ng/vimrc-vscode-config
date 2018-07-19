@@ -14,57 +14,6 @@
 ;; You may delete these explanatory comments.
 (package-initialize)
 
-(global-set-key (kbd "C-?") 'help-command)
-(global-set-key (kbd "M-?") 'mark-paragraph)
-(global-set-key (kbd "C-h") 'delete-backward-char)
-(global-set-key (kbd "M-h") 'backward-kill-word)
-
-(load-theme 'wombat)
-(electric-pair-mode 1)
-(defun set-exec-path-from-shell-PATH ()
-  (let ((path-from-shell (replace-regexp-in-string
-                          "[ \t\n]*$"
-                          ""
-                          (shell-command-to-string "$SHELL --login -i -c 'echo $PATH'"))))
-    (setenv "PATH" path-from-shell)
-    (setq eshell-path-env path-from-shell) ; for eshell users
-    (setq exec-path (split-string path-from-shell path-separator))))
-
-(when window-system (set-exec-path-from-shell-PATH))
-(setenv "GOPATH" "/Users/pdeng/go")
-(add-to-list 'exec-path "/Users/pdeng/go/bin")
-
-(defun my-go-mode-hook ()
-  ; Godef jump key binding
-  (local-set-key (kbd "M-.") 'godef-jump)
-  (local-set-key (kbd "M-*") 'pop-tag-mark)
-  )
-(add-hook 'go-mode-hook 'my-go-mode-hook)
-
-(defun auto-complete-for-go ()
-(auto-complete-mode 1))
-(add-hook 'go-mode-hook 'auto-complete-for-go)
-
-(require 'expand-region)
-(global-set-key (kbd "C-\\") 'er/expand-region)
-(require 'change-inner)
-(global-set-key (kbd "M-i") 'change-inner)
-(global-set-key (kbd "M-o") 'change-outer)
-(require 'multiple-cursors)
-(global-set-key (kbd "M->") 'mc/mark-next-like-this)
-(global-set-key (kbd "M-<") 'mc/mark-previous-like-this)
-
-
-(with-eval-after-load 'go-mode
-   (require 'go-autocomplete))
-
-(require 'popwin)
-(popwin-mode 1)
-
-(push '(direx:direx-mode :position left :width 25 :dedicated t)
-      popwin:special-display-config)
-(global-set-key (kbd "C-x C-j") 'direx:jump-to-directory-other-window)
-
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -97,3 +46,57 @@ f4e00a4" "4aee8551b53a43a883cb0b7f3255d6859d766b6c5e14bcb01bed572fcbef4328" defa
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(default ((t (:background nil)))))
+
+ ;; theme
+(load-theme 'wombat)
+
+ ;; custom keybindings
+(global-set-key (kbd "C-?") 'help-command)
+(global-set-key (kbd "M-?") 'mark-paragraph)
+(global-set-key (kbd "C-h") 'delete-backward-char)
+(global-set-key (kbd "M-h") 'backward-kill-word)
+
+ ;; vim mimic
+(require 'expand-region)
+(global-set-key (kbd "C-\\") 'er/expand-region)
+(require 'change-inner)
+(global-set-key (kbd "M-i") 'change-inner)
+(global-set-key (kbd "M-o") 'change-outer)
+(require 'multiple-cursors)
+(global-set-key (kbd "M->") 'mc/mark-next-like-this)
+(global-set-key (kbd "M-<") 'mc/mark-previous-like-this)
+
+ ;; popwin for direx
+(require 'popwin)
+(popwin-mode 1)
+(push '(direx:direx-mode :position left :width 25 :dedicated t)
+      popwin:special-display-config)
+(global-set-key (kbd "C-x C-j") 'direx:jump-to-directory-other-window)
+
+ ;; pair matching
+(electric-pair-mode 1)
+
+ ;; golang related
+(defun set-exec-path-from-shell-PATH ()
+  (let ((path-from-shell (replace-regexp-in-string
+                          "[ \t\n]*$"
+                          ""
+                          (shell-command-to-string "$SHELL --login -i -c 'echo $PATH'"))))
+    (setenv "PATH" path-from-shell)
+    (setq eshell-path-env path-from-shell) ; for eshell users
+    (setq exec-path (split-string path-from-shell path-separator))))
+
+(when window-system (set-exec-path-from-shell-PATH))
+(setenv "GOPATH" "/Users/pdeng/go")
+(add-to-list 'exec-path "/Users/pdeng/go/bin")
+(defun my-go-mode-hook ()
+  ; Godef jump key binding
+  (local-set-key (kbd "M-.") 'godef-jump)
+  (local-set-key (kbd "M-*") 'pop-tag-mark)
+  )
+(add-hook 'go-mode-hook 'my-go-mode-hook)
+(defun auto-complete-for-go ()
+(auto-complete-mode 1))
+(add-hook 'go-mode-hook 'auto-complete-for-go)
+(with-eval-after-load 'go-mode
+   (require 'go-autocomplete))
