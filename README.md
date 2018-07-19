@@ -37,9 +37,16 @@ cd ~/.vim/bundle/YouCompleteMe && ./install.py; cd -
 ```bash
 # MacOS
 brew cask install emacs
+brew tap homebrew/services (optional)
+brew services start emacs
+alias ec="emacsclient --create-frame"
 
 # Ubuntu
 sudo apt install emacs
+cp emacs.services ~/.config/systemd/user/
+systemctl enable --user emcas
+systemctl start --user emcas
+alias ec="emacsclient $1"
 
 # Emacs
 M-x package-install-selected-packages
