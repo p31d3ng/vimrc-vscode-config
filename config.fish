@@ -15,17 +15,15 @@ alias dip="docker inspect --format '{{ .NetworkSettings.IPAddress }}'"
 alias dkd="docker run -d -P"
 alias dki="docker run -i -t -P"
 alias dex="docker exec -i -t"
-# kubenetes
-alias sw_mk='eval (minikube docker-env)'
-alias sw_nt='eval (minikube docker-env -u)'
+
+# Emacs
+alias ec="emacsclient --create-frame"
 
 # Vim
 set -x EDITOR vim
 
-# Funcitons
-function private_key
-   openssl pkcs8 -in $argv -inform PEM -outform DER -topk8 -nocrypt | openssl sha1 -c
-end
+# Golang
+set -x GOPATH $HOME/go
 
 function clean_docker
   docker rm (docker ps -aq -f status=exited)
