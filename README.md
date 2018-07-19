@@ -36,7 +36,6 @@ cd ~/.vim/bundle/YouCompleteMe && ./install.py; cd -
 
 ```bash
 # MacOS
-brew install emacs --with-cocoa
 brew cask install emacs
 
 # Ubuntu
